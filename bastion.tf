@@ -1,8 +1,9 @@
 resource "google_compute_subnetwork" "east_subnet" {
 
     name = "${format("%s","${var.env}-east-subnet")}"
-    network = "${module.custom.network}"
+    network = "${google_compute_network.custom.self_link}"
     ip_cidr_range = "${var.east_subnet}"
+    region = "us-east1"
   
 }
 
