@@ -61,7 +61,7 @@ resource "google_compute_firewall" "fw-http" {
 output "network" {
   value = "google_compute_network.netwrok.name"
 }
-    
+
 
 
 
