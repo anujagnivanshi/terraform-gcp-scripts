@@ -34,7 +34,7 @@ resource "google_compute_instance" "central" {
     }
   }
 
-  metadata_startup_script = "${data.template_file.nginx.rendered}"
+  metadata_startup_script = data.template_file.nginx.rendered
 
   data "template_file" "nginx" {
 
